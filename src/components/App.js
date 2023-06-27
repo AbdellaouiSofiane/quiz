@@ -5,8 +5,8 @@ import Main from "./Main";
 export default function App() {
   return (
     <div className="app">
+      <Header />
       <QuestionProvider>
-        <Header />
         <Main />
       </QuestionProvider>
     </div>
