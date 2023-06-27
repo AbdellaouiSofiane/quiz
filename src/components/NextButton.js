@@ -1,4 +1,7 @@
-function NextButton({ dispatch }) {
+import { useQuestions } from "../contexts/QuestionContext";
+
+function NextButton() {
+  const { dispatch } = useQuestions();
   return (
     <button
       className="btn btn-ui"

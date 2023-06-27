@@ -1,6 +1,9 @@
+import { useQuestions } from "../contexts/QuestionContext";
 import Options from "./Options";
 
-function Question({ question, answer, dispatch }) {
+function Question() {
+  const { questions, answer, dispatch, index } = useQuestions();
+  const question = questions[index];
   return (
     <div>
       <h4>{question.question}</h4>

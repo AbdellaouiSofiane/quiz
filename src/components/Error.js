@@ -1,7 +1,10 @@
-function Error({ message }) {
+import { useQuestions } from "../contexts/QuestionContext";
+
+function Error() {
+  const { errorMessage } = useQuestions();
   return (
     <p className="error">
-      <span>💥</span> {message}
+      <span>💥</span> {errorMessage}
     </p>
   );
 }
